@@ -1,18 +1,22 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'
 gem 'rails', '4.0.0.rc2'
-
-
-group :production do
-	gem 'pg'
-end
-
-group :development, :test do
-	gem 'sqlite3'
-end
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 1.2'
+gem 'bootstrap-sass', '~> 2.3.2.1'
+gem 'pg'
+gem 'devise', '3.0.0.rc'
+gem 'simple_form', '3.0.0.rc'
+gem 'protected_attributes'
 
 gem 'rails_12factor', group: :production
+
+ruby '1.9.3'
+
+group :development, :test do
+  gem 'sqlite3'
+end
 
 group :assets do
 	gem 'sass-rails', '~> 4.0.0.rc2'
@@ -20,31 +24,6 @@ group :assets do
 	gem 'coffee-rails', '~> 4.0.0'
 end
 
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
-
 group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
